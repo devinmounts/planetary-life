@@ -3,16 +3,9 @@ body {
   background-image: url('./giphy.gif');
   font-family: 'Patua One', cursive;
 }
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+.form-group {
+  display: inline-block; 
 }
-
-/* Add some content at the bottom of the video/page */
 .content {
     position: fixed;
     bottom: 0;
