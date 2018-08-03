@@ -24,19 +24,33 @@ export class Human{
       this.lifeEx = 76;
     } else if (this.gender === "F") {
       this.lifeEx = 81;
-    } else
+    } else {
       this.lifeEx = 78;
+    }
     return this.lifeEx;
   }
-  // ageOnPlanets() {
-  //   ageMercury();
-  //   ageVenus();
-  //   ageMars();
-  //   ageJupiter();
-  // }
+
+  ageOnPlanets() {
+    ageMercury();
+    ageVenus();
+    ageMars();
+    ageJupiter();
+  }
+
   ageMercury() {
     let mercuryAge = (this.ageSeconds / .24);
     return mercuryAge;
+  }
+
+  howMuchTimeMerc() {
+    if (this.lifeEx > (this.ageInSeconds().ageMercury().ageInYears()) {
+      return (this.lifeEx - (this.ageInSeconds().ageMercury().ageInYears()));
+    } else if (this.lifeEx === (this.ageInSeconds().ageMercury().ageInYears()))
+      return "You could die at any moment";
+      else {
+        return ((this.ageInSeconds().ageMercury().ageInYears()) - this.lifeEx);
+      }
+    }
   }
 
   ageVenus() {
