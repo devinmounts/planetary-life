@@ -28,7 +28,12 @@ export class Human{
       this.lifeEx = 78;
     return this.lifeEx;
   }
-
+  // ageOnPlanets() {
+  //   ageMercury();
+  //   ageVenus();
+  //   ageMars();
+  //   ageJupiter();
+  // }
   ageMercury() {
     let mercuryAge = (this.ageSeconds / .24);
     return mercuryAge;
