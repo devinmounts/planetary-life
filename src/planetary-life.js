@@ -12,7 +12,22 @@ export class Human{
   }
 
   ageMercury() {
-    let mercuryAge = (this.age * .24) / 31557600;
-    return mercuryAge
+    let mercuryAge = (this.age / .24);
+    return mercuryAge;
+  }
+
+  ageVenus() {
+    let venusAge = (this.age / .62);
+    return venusAge;
+  }
+
+  ageMars() {
+    let marsAge = (this.age / 1.88);
+    return marsAge;
+  }
+
+  ageJupiter() {
+    let jupiterAge = (this.age / 11.86);
+    return jupiterAge;
   }
 }
