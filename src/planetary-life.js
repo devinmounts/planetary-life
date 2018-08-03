@@ -10,4 +10,9 @@ export class Human{
     this.age = (this.dateNow - this.dateBirth) * .001;
     return this.age;
   }
+
+  ageMercury() {
+    let mercuryAge = (this.age * .24) / 31557600;
+    return mercuryAge
+  }
 }
