@@ -5,7 +5,6 @@ export class Human{
     this.dateNow = new Date();
     this.dateBirth = new Date(dateBirth);
     this.ageSeconds = 0;
-    this.ageYears = 0;
     this.lifeEx = 0;
   }
 
@@ -14,9 +13,9 @@ export class Human{
     return this.ageSeconds;
   }
 
-  ageInYears() {
-    this.ageYears = this.ageSeconds / 31557600;
-    return this.ageYears;
+  ageInYears(seconds) {
+    let age = seconds / 31557600;
+    return age;
   }
 
   lifeExpectancy() {
@@ -31,10 +30,10 @@ export class Human{
   }
 
   ageOnPlanets() {
-    ageMercury();
-    ageVenus();
-    ageMars();
-    ageJupiter();
+    this.ageMercury();
+    this.ageVenus();
+    this.ageMars();
+    this.ageJupiter();
   }
 
   ageMercury() {
@@ -43,13 +42,14 @@ export class Human{
   }
 
   howMuchTimeMerc() {
-    if (this.lifeEx > (this.ageInSeconds().ageMercury().ageInYears()) {
-      return (this.lifeEx - (this.ageInSeconds().ageMercury().ageInYears()));
-    } else if (this.lifeEx === (this.ageInSeconds().ageMercury().ageInYears()))
+    this.ageInSeconds();
+    let age = this.ageInYears(this.ageMercury())
+    if (this.lifeEx > age) {
+      return this.lifeEx - age;
+    } else if (this.lifeEx === age)
       return "You could die at any moment";
       else {
-        return ((this.ageInSeconds().ageMercury().ageInYears()) - this.lifeEx);
-      }
+        return (age) - this.lifeEx;
     }
   }
 
