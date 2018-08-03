@@ -6,7 +6,19 @@ body {
 .form-group {
   display: inline-block;
   padding: 5px;
-  
+
+}
+
+.col-md-3 {
+  display: none;
+  border-color: red;
+  border-style: solid;
+  border-width: thin;
+}
+
+.col-md-3 h3{
+  color: white;
+  text-align: center;
 }
 
 button {
