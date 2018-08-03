@@ -71,8 +71,19 @@ describe('Human', function() {
     let testSec = (testNow-testBirth) * .001;
     let testAge = testSec / 31557600;
     const human = new Human("Smitty", "M", testBirth);
+    let seconds = human.ageInSeconds();
+    expect(human.ageInYears(seconds)).toEqual(testAge);
+  });
+
+  it('should test howMuchTimeMerc() returns age to lifeEx comparison', function(){
+    let testNow = new Date();
+    let testBirth = new Date("1990-08-03");
+    const human = new Human("Smitty", "M", testBirth);
     human.ageInSeconds();
-    expect(human.ageInYears()).toEqual(testAge);
+    human.lifeExpectancy();
+    let ageMerc = human.ageMercury();
+    let testAge = (((testNow - testBirth) * .001) / .24) / 31557600;
+    expect(human.howMuchTimeMerc(this.ageSeconds)).toEqual(testAge - 76);
   });
 
 

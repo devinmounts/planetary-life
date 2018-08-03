@@ -45,11 +45,11 @@ export class Human{
     this.ageInSeconds();
     let age = this.ageInYears(this.ageMercury())
     if (this.lifeEx > age) {
-      return this.lifeEx - age;
+      return this.lifeEx - age;  //years less than life expectancy
     } else if (this.lifeEx === age)
       return "You could die at any moment";
       else {
-        return (age) - this.lifeEx;
+        return  age - this.lifeEx;  //years greater than life expectancy
     }
   }
 
