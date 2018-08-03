@@ -9,16 +9,25 @@ body {
 
 }
 
-.col-md-3 {
-  display: none;
+.col-md-2 {
+  /* display: none; */
+  padding: 10px;
+  margin: 30px;
   border-color: red;
   border-style: solid;
   border-width: thin;
+  color: white;
 }
 
-.col-md-3 h3{
-  color: white;
+.col-md-2 h3{
+  /* color: white; */
   text-align: center;
+  text-decoration: underline;
+}
+
+.col-md-2 h4{
+  /* color: white; */
+  text-align: left;
 }
 
 button {

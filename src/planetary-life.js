@@ -6,6 +6,14 @@ export class Human{
     this.dateBirth = new Date(dateBirth);
     this.ageSeconds = 0;
     this.lifeEx = 0;
+    this.ageMerc = 0;
+    this.ageMar = 0;
+    this.ageV = 0;
+    this.ageJup = 0;
+    this.lifeExMerc = 0;
+    this.lifeExV = 0;
+    this.lifeExMar = 0;
+    this.lifeExJup = 0;
   }
 
   ageInSeconds() {
