@@ -1,0 +1,8 @@
+body {
+  background-image: url('./src/old_moon.png');
+  font-family: 'Patua One', cursive;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
