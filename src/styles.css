@@ -1,5 +1,6 @@
 body {
-  background-image: url('./src/old_moon.png');
+  /* background-color: blue; */
+  background-image: url('./old_moon.png');
   font-family: 'Patua One', cursive;
 }
 
