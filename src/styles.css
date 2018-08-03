@@ -10,13 +10,11 @@ body {
 }
 
 .col-md-2 {
-  /* display: none; */
   padding: 10px;
   margin: 30px;
-  border-color: red;
-  border-style: solid;
-  border-width: thin;
   color: white;
+  background: rgba(0, 0, 0, 0.5);
+
 }
 
 .col-md-2 h3{
@@ -29,6 +27,7 @@ body {
   /* color: white; */
   text-align: left;
 }
+
 
 button {
   float: right;

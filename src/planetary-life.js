@@ -58,7 +58,8 @@ export class Human{
   ageVenus() {
     let venusAge = (this.ageSeconds / .62);
     this.ageV = this.ageInYears(venusAge);
-    return this.ageV;  }
+    return this.ageV;
+  }
 
   howMuchTimeVenus() {
     let age = this.ageVenus();
