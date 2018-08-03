@@ -15,47 +15,52 @@ describe('Human', function() {
     let testNow = new Date();
     let testBirth = new Date("1990-08-03");
     const human = new Human("Smitty", "M", testBirth);
-    expect(human.ageInSeconds()).toEqual((testNow-testBirth) *.001);
+    human.ageInSeconds()
+    expect(human.ageSeconds).toEqual((testNow-testBirth) *.001);
   });
 
-  it('should test ageMercury() returns Human age on mercury in seconds', function(){
+  it('should test ageMercury() returns Human age on mercury in years', function(){
     let testNow = new Date();
     let testBirth = new Date("1990-08-03");
     let testSec = (testNow-testBirth) * .001;
-    let testAge = testSec / .24;
+    let testAge = (testSec / .24) / 31557600;
     const human = new Human("Smitty", "M", testBirth);
     human.ageInSeconds();
-    expect(human.ageMercury()).toEqual(testAge);
+    human.ageMercury()
+    expect(human.ageMerc).toEqual(testAge);
   });
 
-  it('should test ageVenus() returns Human age on venus in seconds', function(){
+  it('should test ageVenus() returns Human age on venus in years', function(){
     let testNow = new Date();
     let testBirth = new Date("1990-08-03");
     let testSec = (testNow-testBirth) * .001;
-    let testAge = testSec / .62;
+    let testAge = (testSec / .62) / 31557600;
     const human = new Human("Smitty", "M", testBirth);
     human.ageInSeconds();
-    expect(human.ageVenus()).toEqual(testAge);
+    human.ageVenus();
+    expect(human.ageV).toEqual(testAge);
   });
 
-  it('should test ageMars() returns Human age on mars in seconds', function(){
+  it('should test ageMars() returns Human age on mars in years', function(){
     let testNow = new Date();
     let testBirth = new Date("1990-08-03");
     let testSec = (testNow-testBirth) * .001;
-    let testAge = testSec / 1.88;
+    let testAge = (testSec / 1.88) / 31557600;
     const human = new Human("Smitty", "M", testBirth);
     human.ageInSeconds();
-    expect(human.ageMars()).toEqual(testAge);
+    human.ageMars();
+    expect(human.ageMar).toEqual(testAge);
   });
 
-  it('should test ageJupiter() returns Human age on jupiter in seconds', function(){
+  it('should test ageJupiter() returns Human age on jupiter in years', function(){
     let testNow = new Date();
     let testBirth = new Date("1990-08-03");
     let testSec = (testNow-testBirth) * .001;
-    let testAge = testSec / 11.86;
+    let testAge = (testSec / 11.86) / 31557600;
     const human = new Human("Smitty", "M", testBirth);
     human.ageInSeconds();
-    expect(human.ageJupiter()).toEqual(testAge);
+    human.ageJupiter()
+    expect(human.ageJup).toEqual(testAge);
   });
 
   it('should test lifeExpectancy() returns Human life expectancy', function(){
@@ -81,8 +86,9 @@ describe('Human', function() {
     const human = new Human("Smitty", "M", testBirth);
     human.ageInSeconds();
     human.lifeExpectancy();
+    human.howMuchTimeMerc(this.ageSeconds)
     let testAge = (((testNow - testBirth) * .001) / .24) / 31557600;
-    expect(human.howMuchTimeMerc(this.ageSeconds)).toEqual(testAge - 76);
+    expect(human.lifeExMerc).toEqual(testAge - 76);
   });
 
   it('should test howMuchTimeVenus() returns age to lifeEx comparison', function(){
@@ -91,8 +97,9 @@ describe('Human', function() {
     const human = new Human("Smitty", "M", testBirth);
     human.ageInSeconds();
     human.lifeExpectancy();
+    human.howMuchTimeVenus(this.ageSeconds)
     let testAge = (((testNow - testBirth) * .001) / .62) / 31557600;
-    expect(human.howMuchTimeVenus(this.ageSeconds)).toEqual(76 - testAge);
+    expect(human.lifeExV).toEqual(76 - testAge);
   });
 
   it('should test howMuchTimeMars() returns age to lifeEx comparison', function(){
@@ -101,8 +108,9 @@ describe('Human', function() {
     const human = new Human("Smitty", "M", testBirth);
     human.ageInSeconds();
     human.lifeExpectancy();
+    human.howMuchTimeMars(this.ageSeconds)
     let testAge = (((testNow - testBirth) * .001) / 1.88) / 31557600;
-    expect(human.howMuchTimeMars(this.ageSeconds)).toEqual(76 - testAge);
+    expect(human.lifeExMar).toEqual(76 - testAge);
   });
 
   it('should test howMuchTimeJupiter() returns age to lifeEx comparison', function(){
@@ -111,8 +119,9 @@ describe('Human', function() {
     const human = new Human("Smitty", "M", testBirth);
     human.ageInSeconds();
     human.lifeExpectancy();
+    human.howMuchTimeJupiter(this.ageSeconds);
     let testAge = (((testNow - testBirth) * .001) / 11.86) / 31557600;
-    expect(human.howMuchTimeJupiter(this.ageSeconds)).toEqual(76 - testAge);
+    expect(human.lifeExJup).toEqual(76 - testAge);
   });
 
 });

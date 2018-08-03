@@ -39,66 +39,73 @@ export class Human{
 
   ageMercury() {
     let mercuryAge = (this.ageSeconds / .24);
-    return mercuryAge;
+    this.ageMerc = this.ageInYears(mercuryAge);
+    return this.ageMerc;
   }
 
   howMuchTimeMerc() {
-    let age = this.ageInYears(this.ageMercury())
+    let age = this.ageMercury()
     if (this.lifeEx > age) {
-      return this.lifeEx - age;  //years less than life expectancy
+      this.lifeExMerc = this.lifeEx - age;  //years less than life expectancy
     } else if (this.lifeEx === age)
-      return "You could die at any moment";
+      this.lifeExMerc = "You could die at any moment";
       else {
-        return  age - this.lifeEx;  //years greater than life expectancy
+      this.lifeExMerc =  (age - this.lifeEx);  //years greater than life expectancy
     }
+    return this.lifeExMerc;
   }
 
   ageVenus() {
     let venusAge = (this.ageSeconds / .62);
-    return venusAge;
-  }
+    this.ageV = this.ageInYears(venusAge);
+    return this.ageV;  }
 
   howMuchTimeVenus() {
-    let age = this.ageInYears(this.ageVenus())
+    let age = this.ageVenus();
     if (this.lifeEx > age) {
-      return this.lifeEx - age;  //years less than life expectancy
+      this.lifeExV = this.lifeEx - age;  //years less than life expectancy
     } else if (this.lifeEx === age)
-      return "You could die at any moment";
+      this.lifeExV = "You could die at any moment";
       else {
-        return  age - this.lifeEx;  //years greater than life expectancy
+        this.lifeExV =  (age - this.lifeEx);  //years greater than life expectancy
     }
+    return this.lifeExV;
   }
 
   ageMars() {
     let marsAge = (this.ageSeconds / 1.88);
-    return marsAge;
+    this.ageMar = this.ageInYears(marsAge);
+    return this.ageMar;
   }
 
   howMuchTimeMars() {
-    let age = this.ageInYears(this.ageMars())
+    let age = this.ageMars();
     if (this.lifeEx > age) {
-      return this.lifeEx - age;  //years less than life expectancy
+      this.lifeExMar = this.lifeEx - age;  //years less than life expectancy
     } else if (this.lifeEx === age)
-      return "You could die at any moment";
+      this.lifeExMar = "You could die at any moment";
       else {
-        return  age - this.lifeEx;  //years greater than life expectancy
+      this.lifeExMar = (age - this.lifeEx);  //years greater than life expectancy
     }
+    return this.lifeExMar;
   }
 
   ageJupiter() {
     let jupiterAge = (this.ageSeconds / 11.86);
-    return jupiterAge;
+    this.ageJup = this.ageInYears(jupiterAge);
+    return this.ageJup;
   }
 
   howMuchTimeJupiter() {
-    let age = this.ageInYears(this.ageJupiter())
+    let age = this.ageJupiter();
     if (this.lifeEx > age) {
-      return this.lifeEx - age;  //years less than life expectancy
+      this.lifeExJup = this.lifeEx - age;  //years less than life expectancy
     } else if (this.lifeEx === age)
-      return "You could die at any moment";
+      this.lifeExJup = "You could die at any moment";
       else {
-        return  age - this.lifeEx;  //years greater than life expectancy
+        this.lifeExJup =  age - this.lifeEx;  //years greater than life expectancy
     }
+    return this.lifeExJup;
   }
 
   runPlanets() {
