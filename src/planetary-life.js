@@ -6,9 +6,8 @@ export class Human{
     this.age = 0;
   }
 
-  ageInSeconds(dateNow, dateBirth) {
-    let age = this.age;
-    age = (dateNow - dateBirth) / 1000;
-    return age;
+  ageInSeconds() {
+    this.age = (this.dateNow - this.dateBirth) * .001;
+    return this.age;
   }
 }
