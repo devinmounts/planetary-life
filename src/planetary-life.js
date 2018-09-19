@@ -114,6 +114,8 @@ export class Human{
     this.lifeExpectancy()
     this.ageMercury();
     this.howMuchTimeMerc();
+    this.ageVenus();
+    this.howMuchTimeVenus();
     this.ageMars();
     this.howMuchTimeMars();
     this.ageJupiter();

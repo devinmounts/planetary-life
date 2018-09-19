@@ -4,6 +4,8 @@
 
 #### By Devin Mounts
 
+## Splash
+![Welcome Page](./src/splash.png)
 ## Description
 
 A web app that allows a user to enter their birthday and see how old they are on other planets based on the length of various planetary years.
